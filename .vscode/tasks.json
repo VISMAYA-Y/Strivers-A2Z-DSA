@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run C++ with I/O + Git Push",
+      "type": "shell",
+      "command": "/bin/zsh",
+      "args": [
+        "-c",
+        "rm -f \"${fileDirname}/output.txt\" && g++ -std=c++17 \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}\" && \"${fileDirname}/${fileBasenameNoExtension}\" < \"${fileDirname}/input.txt\" | tee \"${fileDirname}/output.txt\" && bash \"${workspaceFolder}/autopush.sh\""
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
