@@ -1,0 +1,12 @@
+# Ignore compiled C++ outputs
+a.out
+*.exe
+*.class
+helloworld
+bobo
+
+# Ignore generated outputs
+output.txt
+
+# macOS junk
+.DS_Store
